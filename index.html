@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Shop PRO FULL</title>
+<title>My Shop Uz</title>
 
 <style>
 body{
@@ -69,7 +69,7 @@ button{
 <!-- SHOP -->
 <div id="shop">
 
-<h2 style="text-align:center">🏪 DO‘KON SYSTEM PRO</h2>
+<h2 style="text-align:center">🏪 DO‘KON SESTEMASI</h2>
 
 <div class="topbar">
   <input id="search" placeholder="Qidirish..." onkeyup="show()">
@@ -103,7 +103,7 @@ Foyda: <span id="profit">0</span>
 // 🔐 LOGIN
 function login(){
  let p = document.getElementById("pass").value;
- let saved = localStorage.getItem("password") || "1234";
+ let saved = localStorage.getItem("password") || "7484";
 
  if(p === saved){
   localStorage.setItem("login","ok");
@@ -178,7 +178,7 @@ function editProduct(i){
 
 // ❌ DELETE
 function deleteProduct(i){
- if(confirm("O‘chirasanmi?")){
+ if(confirm("O‘chirasizmi?")){
   products.splice(i,1);
   save();
   show();
@@ -275,14 +275,14 @@ function show(){
    <div>Ombor: ${p.count}</div>
 
    ➕ <input id="a${i}" type="number">
-   <button onclick="add(${i})">+</button>
+   <button onclick="add(${i})">Qo‘shish</button>
 
    ➖ <input id="s${i}" type="number">
-   <button onclick="sell(${i})">Sell</button>
+   <button onclick="sell(${i})">Sotish</button>
 
    <br><br>
-   ✏️ <button onclick="editProduct(${i})">Edit</button>
-   ❌ <button onclick="deleteProduct(${i})">Delete</button>
+   ✏️ <button onclick="editProduct(${i})">Taxrirlash</button>
+   ❌ <button onclick="deleteProduct(${i})">O‘chirish</button>
   </div>
  `;
  });
